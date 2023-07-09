@@ -1,0 +1,29 @@
+.setName_block{
+    text-align: center;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+.setName_title{
+    font-size: 23px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+.setName{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.setName_input{
+    border: 1px solid white;
+    background: 0;
+    margin-bottom: 10px;
+}
+.setName_button{
+    cursor: pointer;
+    background: orange;
+    border: 0;
+    border-radius: 10px;
+    color: black;
+}

@@ -1,0 +1,42 @@
+.wrapper{
+  background: #000009;
+  height: 100%;
+}
+.app{
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.colum{
+  gap: 15px;
+}
+*{
+  font-family: 'Alegreya', serif;
+  font-family: 'Open Sans', sans-serif;
+}
+.colum{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin: 0 auto;
+}
+.sava{
+  color: black;
+  cursor: pointer;
+  background: purple;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0;
+}
+.add{
+  color: black;
+  background: orange;
+  padding: 5px;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}

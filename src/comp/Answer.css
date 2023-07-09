@@ -1,0 +1,35 @@
+.ansver{
+    margin-bottom: 10px;
+}
+.ansver_btn{
+    cursor: pointer;
+    border-radius: 50%;
+    background: 0;
+    border: 1px solid gray;
+    margin-right: 5px;
+}
+.ansver_input{
+    padding: 2.5%;
+    border-radius: 10px;
+    border: 1px solid gray;
+    width: 80%;
+    background: #000009;
+}
+.delit{
+    cursor: pointer;
+    margin-left: 5px;
+    background: red;
+    border: 0;
+}
+.accept{
+    background: green;
+}
+@media screen and (max-width: 500px){
+    .ansver_input{
+        padding: 2.5%;
+        border-radius: 10px;
+        border: 1px solid gray;
+        width: 70%;
+        background: #000009;
+    }
+}
