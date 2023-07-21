@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import Queshen from "./Queshen";
 import TextLink from "./TextLink";
 import axios from "axios";
-
+import "./MakeQuestion.css"
 
 const MakeQuestion = (prop) => {
     const [arrForm, setArrForm] = useState([
@@ -36,9 +36,9 @@ const MakeQuestion = (prop) => {
         return Math.floor(Math.random() * max);
     }
 
-    const NameSet = async (i) =>{
+    const setTestInfo = async (i) =>{
         try {
-            const response = await axios.post(' https://319b-46-36-223-73.ngrok-free.app/userName', { i });
+            const response = await axios.post('http://localhost:5000/addTestInfo', { i });
             console.log(response.data.message);
         } catch (error) {
             console.error(error);
@@ -48,12 +48,8 @@ const MakeQuestion = (prop) => {
     const save = () =>{
         const linkTag = getRandomInt(1000000000);
         setLinkNum(linkTag)
-        console.log({
-            userName: prop.name,
-            userArrowQuestion: arrForm,
-            userLink: linkTag
-        })
-        NameSet({
+        console.log(arrForm)
+        setTestInfo({
             userName: prop.name,
             userArrowQuestion: arrForm,
             userLink: linkTag
@@ -70,14 +66,23 @@ const MakeQuestion = (prop) => {
                 ]}])
         }
     }
+    const updateArrForm = (arr, index) => {
+        const updatedArray = [
+            ...arrForm,
+            updatedArray[index].question_answer: [];
+        ];
+        console.log(updatedArray[index])
+
+        // Установите новое значение состояния массива
+        setArrForm(updatedArray);
+        console.log(arrForm)
+    }
     return (
-        <div>
-            <div className="colum">
-                {arrForm.map((i)=><Queshen item ={i} index={i.Question_index} />)}
-                <button className="add" onClick={add}>ADD</button>
-                <button className="sava" onClick={save}>Sava and link</button>
-                <TextLink linkNum={linkNum} />
-            </div>
+        <div className="colum">
+            {arrForm.map((item)=><Queshen onUpdateArrForm={obj=>updateArrForm(obj)}  item = {item} index={item.Question_index} />)}
+            <button className="add" onClick={add}>ADD</button>
+            <button className="sava" onClick={save}>Sava and link</button>
+            <TextLink linkNum={linkNum} />
         </div>
     );
 };

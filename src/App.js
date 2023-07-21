@@ -5,26 +5,26 @@ import MakeQuestion from "./comp/MakeQuestion";
 
 function App() {
     const [name , setName] = useState()
-    const [question, setQuestion] = useState(false)
+    const [veryfiUserName, setVeryfiUserName] = useState(false)
 
     const checkQuestion = (i) =>{
         if(i){
             setName(i)
-            setQuestion(true)
+            setVeryfiUserName(true)
         }
     }
 
   return (
-    <div className="wrapper">
-      <div className='app'>
-          {
-              (question)?
-                    <MakeQuestion name = {name}/>
-                  :
-                    <SetName onSetName={i=>checkQuestion(i)}/>
-          }
+      <div className="app_wrapper">
+          <div className='app'>
+              {
+                  (veryfiUserName)?
+                      <MakeQuestion name = {name}/>
+                      :
+                      <SetName onSetName={i=>checkQuestion(i)}/>
+              }
+          </div>
       </div>
-    </div>
   );
 }
 

@@ -1,12 +1,11 @@
 import React from 'react';
 
 const TextLink = (prop) => {
-    console.log(prop)
     return (
         <div>
             <div className="textLink">
                 <div className="textLink_title">It's link for your friend</div>
-                <div>http://localhost:3000/{prop.linkNum}</div>
+                <div>http://localhost:3000/test/{prop.linkNum}</div>
             </div>
         </div>
     );

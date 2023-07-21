@@ -17,10 +17,10 @@ const Answer = (prop) => {
         }
     }
     return (
-        <div className="ansver">
-            <button onClick={changeActually} className={"ansver_btn "+accept}>✔</button>
-            <input ref={input} onChange={change} type="text" placeholder={prop.i.answer_text} className={"ansver_input "+accept}/>
-            <button onClick={prop.onDel} className="ansver_btn delit">✖</button>
+        <div className="answer">
+            <button onClick={changeActually} className={"answer_btn "+accept}>✔</button>
+            <input ref={input} onChange={change} type="text" placeholder={prop.i.answer_text} className={"answer_input "+accept}/>
+            <button onClick={prop.onDel} className="answer_btn delete">✖</button>
         </div>
     );
 };

@@ -28,12 +28,12 @@ const Queshen = (prop) => {
                 answer_id:  getRandomInt(1000000000),
                 answer_is_right: false
             }])
-            prop.item.question_answer = answerArrow
+            prop.onUpdateArrForm(answerArrow)
         }
     }
     const deleteAnswer = (id) =>{
         setAnswerArrow(answerArrow.filter((item) => item.answer_id !== id))
-        prop.item.question_answer = answerArrow
+        prop.onUpdateArrForm(answerArrow)
     }
 
     return (
@@ -46,7 +46,7 @@ const Queshen = (prop) => {
                 {answerArrow.map((i)=>(
                     <Answer key={i.answer_id} i={i} onDel={() => {
                         deleteAnswer(i.answer_id)
-                    } } onSet={(input)=>{i.answer_text = input; prop.item.question_answer = answerArrow}} />
+                    } } onSet={(input)=>{i.answer_text = input; prop.onUpdateArrForm(answerArrow)}} />
                 ))}
                 <button onClick={addAnswer} className="add_option">add an option</button>
             </div>

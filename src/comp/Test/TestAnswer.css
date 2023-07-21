@@ -1,0 +1,18 @@
+.answer_text {
+    width: 100%;
+    user-select: none;
+    cursor: pointer;
+    padding: 5px;
+    border: solid 1px gray;
+    border-radius: 5px;
+}
+
+.selected{
+    background: gray;
+}
+
+.answer_text input[type='radio'] {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}

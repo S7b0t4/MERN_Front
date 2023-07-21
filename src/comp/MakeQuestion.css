@@ -1,0 +1,30 @@
+*{
+    font-family: 'Alegreya', serif;
+    font-family: 'Open Sans', sans-serif;
+}
+.colum{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    gap: 15px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    margin: 0 auto;
+}
+.sava{
+    color: black;
+    cursor: pointer;
+    background: purple;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+}
+.add{
+    color: black;
+    background: orange;
+    padding: 5px;
+    border-radius: 5px;
+    border: 0;
+    cursor: pointer;
+}

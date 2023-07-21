@@ -1,0 +1,11 @@
+.answer_block{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.queshen_block_title{
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 30px;
+    color: gray;
+}

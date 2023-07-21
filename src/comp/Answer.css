@@ -1,21 +1,21 @@
-.ansver{
+.answer{
     margin-bottom: 10px;
 }
-.ansver_btn{
+.answer_btn{
     cursor: pointer;
     border-radius: 50%;
     background: 0;
     border: 1px solid gray;
     margin-right: 5px;
 }
-.ansver_input{
+.answer_input{
     padding: 2.5%;
     border-radius: 10px;
     border: 1px solid gray;
     width: 80%;
     background: #000009;
 }
-.delit{
+.delete{
     cursor: pointer;
     margin-left: 5px;
     background: red;
@@ -25,7 +25,7 @@
     background: green;
 }
 @media screen and (max-width: 500px){
-    .ansver_input{
+    .answer_input{
         padding: 2.5%;
         border-radius: 10px;
         border: 1px solid gray;
